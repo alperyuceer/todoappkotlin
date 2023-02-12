@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/rvTaskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bu görevi yapacaksın."
+        android:textSize="25dp"
+        android:layout_weight="1">
+    </TextView>
+    <TextView
+        android:id="@+id/rvDoneView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:text="✅"
+        android:textSize="35dp">
+    </TextView>
+    <TextView
+        android:id="@+id/rvDeleteView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✘"
+        android:textSize="45dp">
+    </TextView>
+
+
+
+</LinearLayout>
