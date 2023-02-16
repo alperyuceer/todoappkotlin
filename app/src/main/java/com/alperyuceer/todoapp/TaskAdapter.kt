@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.alperyuceer.todoapp.databinding.RecyclerviewRowBinding
 
-class TaskAdapter(val taskList: ArrayList<String>):RecyclerView.Adapter<TaskAdapter.TaskHolder>() {
+class TaskAdapter(val taskList: MutableList<String>):RecyclerView.Adapter<TaskAdapter.TaskHolder>() {
 
     class TaskHolder(val binding: RecyclerviewRowBinding):RecyclerView.ViewHolder(binding.root){
     }
@@ -25,8 +25,8 @@ class TaskAdapter(val taskList: ArrayList<String>):RecyclerView.Adapter<TaskAdap
 
     override fun onBindViewHolder(holder: TaskHolder, position: Int) {
         holder.binding.rvTaskTitle.text = taskList.get(position)
-        holder.binding.rvDeleteView.setOnClickListener {
-            taskList.remove(taskList[position])
+        holder.binding.rvDoneView.setOnClickListener {
+            taskList.removeAt(position)
             notifyDataSetChanged()
         }
     }
